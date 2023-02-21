@@ -70,6 +70,7 @@ public class FilterRecords {
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
+        sql = "SELECT * FROM employee WHERE last_name = 'Smith'";
 
         List<User> users = new ArrayList<>();
         try {
@@ -104,7 +105,7 @@ public class FilterRecords {
 
         String sql = FileUtil.parseSQLFile("problem2.sql");
 
-
+        sql = "SELECT * FROM employee WHERE salary > 75000";
         List<User> users = new ArrayList<>();
         try {
             Connection connection = ConnectionUtil.getConnection();
